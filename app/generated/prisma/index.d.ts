@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model Vendorproduct
+ * Model vendorproduct
  * 
  */
-export type Vendorproduct = $Result.DefaultSelection<Prisma.$VendorproductPayload>
+export type vendorproduct = $Result.DefaultSelection<Prisma.$vendorproductPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -160,14 +160,14 @@ export class PrismaClient<
   get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.vendorproduct`: Exposes CRUD operations for the **Vendorproduct** model.
+   * `prisma.vendorproduct`: Exposes CRUD operations for the **vendorproduct** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Vendorproducts
     * const vendorproducts = await prisma.vendorproduct.findMany()
     * ```
     */
-  get vendorproduct(): Prisma.VendorproductDelegate<ExtArgs, ClientOptions>;
+  get vendorproduct(): Prisma.vendorproductDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +609,7 @@ export namespace Prisma {
 
   export const ModelName: {
     User: 'User',
-    Vendorproduct: 'Vendorproduct'
+    vendorproduct: 'vendorproduct'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -706,76 +706,76 @@ export namespace Prisma {
           }
         }
       }
-      Vendorproduct: {
-        payload: Prisma.$VendorproductPayload<ExtArgs>
-        fields: Prisma.VendorproductFieldRefs
+      vendorproduct: {
+        payload: Prisma.$vendorproductPayload<ExtArgs>
+        fields: Prisma.vendorproductFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.VendorproductFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload> | null
+            args: Prisma.vendorproductFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.VendorproductFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>
+            args: Prisma.vendorproductFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>
           }
           findFirst: {
-            args: Prisma.VendorproductFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload> | null
+            args: Prisma.vendorproductFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.VendorproductFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>
+            args: Prisma.vendorproductFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>
           }
           findMany: {
-            args: Prisma.VendorproductFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>[]
+            args: Prisma.vendorproductFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>[]
           }
           create: {
-            args: Prisma.VendorproductCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>
+            args: Prisma.vendorproductCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>
           }
           createMany: {
-            args: Prisma.VendorproductCreateManyArgs<ExtArgs>
+            args: Prisma.vendorproductCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.VendorproductCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>[]
+            args: Prisma.vendorproductCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>[]
           }
           delete: {
-            args: Prisma.VendorproductDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>
+            args: Prisma.vendorproductDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>
           }
           update: {
-            args: Prisma.VendorproductUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>
+            args: Prisma.vendorproductUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>
           }
           deleteMany: {
-            args: Prisma.VendorproductDeleteManyArgs<ExtArgs>
+            args: Prisma.vendorproductDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.VendorproductUpdateManyArgs<ExtArgs>
+            args: Prisma.vendorproductUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.VendorproductUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>[]
+            args: Prisma.vendorproductUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>[]
           }
           upsert: {
-            args: Prisma.VendorproductUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$VendorproductPayload>
+            args: Prisma.vendorproductUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$vendorproductPayload>
           }
           aggregate: {
             args: Prisma.VendorproductAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateVendorproduct>
           }
           groupBy: {
-            args: Prisma.VendorproductGroupByArgs<ExtArgs>
+            args: Prisma.vendorproductGroupByArgs<ExtArgs>
             result: $Utils.Optional<VendorproductGroupByOutputType>[]
           }
           count: {
-            args: Prisma.VendorproductCountArgs<ExtArgs>
+            args: Prisma.vendorproductCountArgs<ExtArgs>
             result: $Utils.Optional<VendorproductCountAggregateOutputType> | number
           }
         }
@@ -865,7 +865,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     user?: UserOmit
-    vendorproduct?: VendorproductOmit
+    vendorproduct?: vendorproductOmit
   }
 
   /* Types for Logging */
@@ -1990,7 +1990,7 @@ export namespace Prisma {
 
 
   /**
-   * Model Vendorproduct
+   * Model vendorproduct
    */
 
   export type AggregateVendorproduct = {
@@ -2092,37 +2092,37 @@ export namespace Prisma {
 
   export type VendorproductAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Vendorproduct to aggregate.
+     * Filter which vendorproduct to aggregate.
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Vendorproducts to fetch.
+     * Determine the order of vendorproducts to fetch.
      */
-    orderBy?: VendorproductOrderByWithRelationInput | VendorproductOrderByWithRelationInput[]
+    orderBy?: vendorproductOrderByWithRelationInput | vendorproductOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: VendorproductWhereUniqueInput
+    cursor?: vendorproductWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Vendorproducts from the position of the cursor.
+     * Take `±n` vendorproducts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Vendorproducts.
+     * Skip the first `n` vendorproducts.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Vendorproducts
+     * Count returned vendorproducts
     **/
     _count?: true | VendorproductCountAggregateInputType
     /**
@@ -2162,11 +2162,11 @@ export namespace Prisma {
 
 
 
-  export type VendorproductGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: VendorproductWhereInput
-    orderBy?: VendorproductOrderByWithAggregationInput | VendorproductOrderByWithAggregationInput[]
+  export type vendorproductGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: vendorproductWhereInput
+    orderBy?: vendorproductOrderByWithAggregationInput | vendorproductOrderByWithAggregationInput[]
     by: VendorproductScalarFieldEnum[] | VendorproductScalarFieldEnum
-    having?: VendorproductScalarWhereWithAggregatesInput
+    having?: vendorproductScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: VendorproductCountAggregateInputType | true
@@ -2192,7 +2192,7 @@ export namespace Prisma {
     _max: VendorproductMaxAggregateOutputType | null
   }
 
-  type GetVendorproductGroupByPayload<T extends VendorproductGroupByArgs> = Prisma.PrismaPromise<
+  type GetVendorproductGroupByPayload<T extends vendorproductGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<VendorproductGroupByOutputType, T['by']> &
         {
@@ -2206,7 +2206,7 @@ export namespace Prisma {
     >
 
 
-  export type VendorproductSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type vendorproductSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     proname?: boolean
     prodetails?: boolean
@@ -2217,7 +2217,7 @@ export namespace Prisma {
     image?: boolean
   }, ExtArgs["result"]["vendorproduct"]>
 
-  export type VendorproductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type vendorproductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     proname?: boolean
     prodetails?: boolean
@@ -2228,7 +2228,7 @@ export namespace Prisma {
     image?: boolean
   }, ExtArgs["result"]["vendorproduct"]>
 
-  export type VendorproductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type vendorproductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     proname?: boolean
     prodetails?: boolean
@@ -2239,7 +2239,7 @@ export namespace Prisma {
     image?: boolean
   }, ExtArgs["result"]["vendorproduct"]>
 
-  export type VendorproductSelectScalar = {
+  export type vendorproductSelectScalar = {
     id?: boolean
     proname?: boolean
     prodetails?: boolean
@@ -2250,10 +2250,10 @@ export namespace Prisma {
     image?: boolean
   }
 
-  export type VendorproductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "proname" | "prodetails" | "categroy" | "price" | "warranty" | "createdAt" | "image", ExtArgs["result"]["vendorproduct"]>
+  export type vendorproductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "proname" | "prodetails" | "categroy" | "price" | "warranty" | "createdAt" | "image", ExtArgs["result"]["vendorproduct"]>
 
-  export type $VendorproductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Vendorproduct"
+  export type $vendorproductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "vendorproduct"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -2268,18 +2268,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type VendorproductGetPayload<S extends boolean | null | undefined | VendorproductDefaultArgs> = $Result.GetResult<Prisma.$VendorproductPayload, S>
+  type vendorproductGetPayload<S extends boolean | null | undefined | vendorproductDefaultArgs> = $Result.GetResult<Prisma.$vendorproductPayload, S>
 
-  type VendorproductCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<VendorproductFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type vendorproductCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<vendorproductFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: VendorproductCountAggregateInputType | true
     }
 
-  export interface VendorproductDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Vendorproduct'], meta: { name: 'Vendorproduct' } }
+  export interface vendorproductDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['vendorproduct'], meta: { name: 'vendorproduct' } }
     /**
      * Find zero or one Vendorproduct that matches the filter.
-     * @param {VendorproductFindUniqueArgs} args - Arguments to find a Vendorproduct
+     * @param {vendorproductFindUniqueArgs} args - Arguments to find a Vendorproduct
      * @example
      * // Get one Vendorproduct
      * const vendorproduct = await prisma.vendorproduct.findUnique({
@@ -2288,12 +2288,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends VendorproductFindUniqueArgs>(args: SelectSubset<T, VendorproductFindUniqueArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends vendorproductFindUniqueArgs>(args: SelectSubset<T, vendorproductFindUniqueArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Vendorproduct that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {VendorproductFindUniqueOrThrowArgs} args - Arguments to find a Vendorproduct
+     * @param {vendorproductFindUniqueOrThrowArgs} args - Arguments to find a Vendorproduct
      * @example
      * // Get one Vendorproduct
      * const vendorproduct = await prisma.vendorproduct.findUniqueOrThrow({
@@ -2302,13 +2302,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends VendorproductFindUniqueOrThrowArgs>(args: SelectSubset<T, VendorproductFindUniqueOrThrowArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends vendorproductFindUniqueOrThrowArgs>(args: SelectSubset<T, vendorproductFindUniqueOrThrowArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Vendorproduct that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {VendorproductFindFirstArgs} args - Arguments to find a Vendorproduct
+     * @param {vendorproductFindFirstArgs} args - Arguments to find a Vendorproduct
      * @example
      * // Get one Vendorproduct
      * const vendorproduct = await prisma.vendorproduct.findFirst({
@@ -2317,14 +2317,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends VendorproductFindFirstArgs>(args?: SelectSubset<T, VendorproductFindFirstArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends vendorproductFindFirstArgs>(args?: SelectSubset<T, vendorproductFindFirstArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Vendorproduct that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {VendorproductFindFirstOrThrowArgs} args - Arguments to find a Vendorproduct
+     * @param {vendorproductFindFirstOrThrowArgs} args - Arguments to find a Vendorproduct
      * @example
      * // Get one Vendorproduct
      * const vendorproduct = await prisma.vendorproduct.findFirstOrThrow({
@@ -2333,13 +2333,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends VendorproductFindFirstOrThrowArgs>(args?: SelectSubset<T, VendorproductFindFirstOrThrowArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends vendorproductFindFirstOrThrowArgs>(args?: SelectSubset<T, vendorproductFindFirstOrThrowArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Vendorproducts that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {VendorproductFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {vendorproductFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Vendorproducts
      * const vendorproducts = await prisma.vendorproduct.findMany()
@@ -2351,11 +2351,11 @@ export namespace Prisma {
      * const vendorproductWithIdOnly = await prisma.vendorproduct.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends VendorproductFindManyArgs>(args?: SelectSubset<T, VendorproductFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends vendorproductFindManyArgs>(args?: SelectSubset<T, vendorproductFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Vendorproduct.
-     * @param {VendorproductCreateArgs} args - Arguments to create a Vendorproduct.
+     * @param {vendorproductCreateArgs} args - Arguments to create a Vendorproduct.
      * @example
      * // Create one Vendorproduct
      * const Vendorproduct = await prisma.vendorproduct.create({
@@ -2365,11 +2365,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends VendorproductCreateArgs>(args: SelectSubset<T, VendorproductCreateArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends vendorproductCreateArgs>(args: SelectSubset<T, vendorproductCreateArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Vendorproducts.
-     * @param {VendorproductCreateManyArgs} args - Arguments to create many Vendorproducts.
+     * @param {vendorproductCreateManyArgs} args - Arguments to create many Vendorproducts.
      * @example
      * // Create many Vendorproducts
      * const vendorproduct = await prisma.vendorproduct.createMany({
@@ -2379,11 +2379,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends VendorproductCreateManyArgs>(args?: SelectSubset<T, VendorproductCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends vendorproductCreateManyArgs>(args?: SelectSubset<T, vendorproductCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Vendorproducts and returns the data saved in the database.
-     * @param {VendorproductCreateManyAndReturnArgs} args - Arguments to create many Vendorproducts.
+     * @param {vendorproductCreateManyAndReturnArgs} args - Arguments to create many Vendorproducts.
      * @example
      * // Create many Vendorproducts
      * const vendorproduct = await prisma.vendorproduct.createManyAndReturn({
@@ -2403,11 +2403,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends VendorproductCreateManyAndReturnArgs>(args?: SelectSubset<T, VendorproductCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends vendorproductCreateManyAndReturnArgs>(args?: SelectSubset<T, vendorproductCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Vendorproduct.
-     * @param {VendorproductDeleteArgs} args - Arguments to delete one Vendorproduct.
+     * @param {vendorproductDeleteArgs} args - Arguments to delete one Vendorproduct.
      * @example
      * // Delete one Vendorproduct
      * const Vendorproduct = await prisma.vendorproduct.delete({
@@ -2417,11 +2417,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends VendorproductDeleteArgs>(args: SelectSubset<T, VendorproductDeleteArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends vendorproductDeleteArgs>(args: SelectSubset<T, vendorproductDeleteArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Vendorproduct.
-     * @param {VendorproductUpdateArgs} args - Arguments to update one Vendorproduct.
+     * @param {vendorproductUpdateArgs} args - Arguments to update one Vendorproduct.
      * @example
      * // Update one Vendorproduct
      * const vendorproduct = await prisma.vendorproduct.update({
@@ -2434,11 +2434,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends VendorproductUpdateArgs>(args: SelectSubset<T, VendorproductUpdateArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends vendorproductUpdateArgs>(args: SelectSubset<T, vendorproductUpdateArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Vendorproducts.
-     * @param {VendorproductDeleteManyArgs} args - Arguments to filter Vendorproducts to delete.
+     * @param {vendorproductDeleteManyArgs} args - Arguments to filter Vendorproducts to delete.
      * @example
      * // Delete a few Vendorproducts
      * const { count } = await prisma.vendorproduct.deleteMany({
@@ -2448,13 +2448,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends VendorproductDeleteManyArgs>(args?: SelectSubset<T, VendorproductDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends vendorproductDeleteManyArgs>(args?: SelectSubset<T, vendorproductDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Vendorproducts.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {VendorproductUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {vendorproductUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Vendorproducts
      * const vendorproduct = await prisma.vendorproduct.updateMany({
@@ -2467,11 +2467,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends VendorproductUpdateManyArgs>(args: SelectSubset<T, VendorproductUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends vendorproductUpdateManyArgs>(args: SelectSubset<T, vendorproductUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Vendorproducts and returns the data updated in the database.
-     * @param {VendorproductUpdateManyAndReturnArgs} args - Arguments to update many Vendorproducts.
+     * @param {vendorproductUpdateManyAndReturnArgs} args - Arguments to update many Vendorproducts.
      * @example
      * // Update many Vendorproducts
      * const vendorproduct = await prisma.vendorproduct.updateManyAndReturn({
@@ -2497,11 +2497,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends VendorproductUpdateManyAndReturnArgs>(args: SelectSubset<T, VendorproductUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends vendorproductUpdateManyAndReturnArgs>(args: SelectSubset<T, vendorproductUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Vendorproduct.
-     * @param {VendorproductUpsertArgs} args - Arguments to update or create a Vendorproduct.
+     * @param {vendorproductUpsertArgs} args - Arguments to update or create a Vendorproduct.
      * @example
      * // Update or create a Vendorproduct
      * const vendorproduct = await prisma.vendorproduct.upsert({
@@ -2516,14 +2516,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends VendorproductUpsertArgs>(args: SelectSubset<T, VendorproductUpsertArgs<ExtArgs>>): Prisma__VendorproductClient<$Result.GetResult<Prisma.$VendorproductPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends vendorproductUpsertArgs>(args: SelectSubset<T, vendorproductUpsertArgs<ExtArgs>>): Prisma__vendorproductClient<$Result.GetResult<Prisma.$vendorproductPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Vendorproducts.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {VendorproductCountArgs} args - Arguments to filter Vendorproducts to count.
+     * @param {vendorproductCountArgs} args - Arguments to filter Vendorproducts to count.
      * @example
      * // Count the number of Vendorproducts
      * const count = await prisma.vendorproduct.count({
@@ -2532,8 +2532,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends VendorproductCountArgs>(
-      args?: Subset<T, VendorproductCountArgs>,
+    count<T extends vendorproductCountArgs>(
+      args?: Subset<T, vendorproductCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -2572,7 +2572,7 @@ export namespace Prisma {
      * Group by Vendorproduct.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {VendorproductGroupByArgs} args - Group by arguments.
+     * @param {vendorproductGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2587,14 +2587,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends VendorproductGroupByArgs,
+      T extends vendorproductGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: VendorproductGroupByArgs['orderBy'] }
-        : { orderBy?: VendorproductGroupByArgs['orderBy'] },
+        ? { orderBy: vendorproductGroupByArgs['orderBy'] }
+        : { orderBy?: vendorproductGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2643,20 +2643,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, VendorproductGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetVendorproductGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, vendorproductGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetVendorproductGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Vendorproduct model
+   * Fields of the vendorproduct model
    */
-  readonly fields: VendorproductFieldRefs;
+  readonly fields: vendorproductFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Vendorproduct.
+   * The delegate class that acts as a "Promise-like" for vendorproduct.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__VendorproductClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__vendorproductClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2684,380 +2684,380 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Vendorproduct model
+   * Fields of the vendorproduct model
    */
-  interface VendorproductFieldRefs {
-    readonly id: FieldRef<"Vendorproduct", 'Int'>
-    readonly proname: FieldRef<"Vendorproduct", 'String'>
-    readonly prodetails: FieldRef<"Vendorproduct", 'String'>
-    readonly categroy: FieldRef<"Vendorproduct", 'String'>
-    readonly price: FieldRef<"Vendorproduct", 'Int'>
-    readonly warranty: FieldRef<"Vendorproduct", 'String'>
-    readonly createdAt: FieldRef<"Vendorproduct", 'DateTime'>
-    readonly image: FieldRef<"Vendorproduct", 'String'>
+  interface vendorproductFieldRefs {
+    readonly id: FieldRef<"vendorproduct", 'Int'>
+    readonly proname: FieldRef<"vendorproduct", 'String'>
+    readonly prodetails: FieldRef<"vendorproduct", 'String'>
+    readonly categroy: FieldRef<"vendorproduct", 'String'>
+    readonly price: FieldRef<"vendorproduct", 'Int'>
+    readonly warranty: FieldRef<"vendorproduct", 'String'>
+    readonly createdAt: FieldRef<"vendorproduct", 'DateTime'>
+    readonly image: FieldRef<"vendorproduct", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Vendorproduct findUnique
+   * vendorproduct findUnique
    */
-  export type VendorproductFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * Filter, which Vendorproduct to fetch.
+     * Filter, which vendorproduct to fetch.
      */
-    where: VendorproductWhereUniqueInput
+    where: vendorproductWhereUniqueInput
   }
 
   /**
-   * Vendorproduct findUniqueOrThrow
+   * vendorproduct findUniqueOrThrow
    */
-  export type VendorproductFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * Filter, which Vendorproduct to fetch.
+     * Filter, which vendorproduct to fetch.
      */
-    where: VendorproductWhereUniqueInput
+    where: vendorproductWhereUniqueInput
   }
 
   /**
-   * Vendorproduct findFirst
+   * vendorproduct findFirst
    */
-  export type VendorproductFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * Filter, which Vendorproduct to fetch.
+     * Filter, which vendorproduct to fetch.
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Vendorproducts to fetch.
+     * Determine the order of vendorproducts to fetch.
      */
-    orderBy?: VendorproductOrderByWithRelationInput | VendorproductOrderByWithRelationInput[]
+    orderBy?: vendorproductOrderByWithRelationInput | vendorproductOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Vendorproducts.
+     * Sets the position for searching for vendorproducts.
      */
-    cursor?: VendorproductWhereUniqueInput
+    cursor?: vendorproductWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Vendorproducts from the position of the cursor.
+     * Take `±n` vendorproducts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Vendorproducts.
+     * Skip the first `n` vendorproducts.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Vendorproducts.
+     * Filter by unique combinations of vendorproducts.
      */
     distinct?: VendorproductScalarFieldEnum | VendorproductScalarFieldEnum[]
   }
 
   /**
-   * Vendorproduct findFirstOrThrow
+   * vendorproduct findFirstOrThrow
    */
-  export type VendorproductFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * Filter, which Vendorproduct to fetch.
+     * Filter, which vendorproduct to fetch.
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Vendorproducts to fetch.
+     * Determine the order of vendorproducts to fetch.
      */
-    orderBy?: VendorproductOrderByWithRelationInput | VendorproductOrderByWithRelationInput[]
+    orderBy?: vendorproductOrderByWithRelationInput | vendorproductOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Vendorproducts.
+     * Sets the position for searching for vendorproducts.
      */
-    cursor?: VendorproductWhereUniqueInput
+    cursor?: vendorproductWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Vendorproducts from the position of the cursor.
+     * Take `±n` vendorproducts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Vendorproducts.
+     * Skip the first `n` vendorproducts.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Vendorproducts.
+     * Filter by unique combinations of vendorproducts.
      */
     distinct?: VendorproductScalarFieldEnum | VendorproductScalarFieldEnum[]
   }
 
   /**
-   * Vendorproduct findMany
+   * vendorproduct findMany
    */
-  export type VendorproductFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * Filter, which Vendorproducts to fetch.
+     * Filter, which vendorproducts to fetch.
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Vendorproducts to fetch.
+     * Determine the order of vendorproducts to fetch.
      */
-    orderBy?: VendorproductOrderByWithRelationInput | VendorproductOrderByWithRelationInput[]
+    orderBy?: vendorproductOrderByWithRelationInput | vendorproductOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Vendorproducts.
+     * Sets the position for listing vendorproducts.
      */
-    cursor?: VendorproductWhereUniqueInput
+    cursor?: vendorproductWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Vendorproducts from the position of the cursor.
+     * Take `±n` vendorproducts from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Vendorproducts.
+     * Skip the first `n` vendorproducts.
      */
     skip?: number
     distinct?: VendorproductScalarFieldEnum | VendorproductScalarFieldEnum[]
   }
 
   /**
-   * Vendorproduct create
+   * vendorproduct create
    */
-  export type VendorproductCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * The data needed to create a Vendorproduct.
+     * The data needed to create a vendorproduct.
      */
-    data: XOR<VendorproductCreateInput, VendorproductUncheckedCreateInput>
+    data: XOR<vendorproductCreateInput, vendorproductUncheckedCreateInput>
   }
 
   /**
-   * Vendorproduct createMany
+   * vendorproduct createMany
    */
-  export type VendorproductCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Vendorproducts.
+     * The data used to create many vendorproducts.
      */
-    data: VendorproductCreateManyInput | VendorproductCreateManyInput[]
+    data: vendorproductCreateManyInput | vendorproductCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Vendorproduct createManyAndReturn
+   * vendorproduct createManyAndReturn
    */
-  export type VendorproductCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelectCreateManyAndReturn<ExtArgs> | null
+    select?: vendorproductSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * The data used to create many Vendorproducts.
+     * The data used to create many vendorproducts.
      */
-    data: VendorproductCreateManyInput | VendorproductCreateManyInput[]
+    data: vendorproductCreateManyInput | vendorproductCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Vendorproduct update
+   * vendorproduct update
    */
-  export type VendorproductUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * The data needed to update a Vendorproduct.
+     * The data needed to update a vendorproduct.
      */
-    data: XOR<VendorproductUpdateInput, VendorproductUncheckedUpdateInput>
+    data: XOR<vendorproductUpdateInput, vendorproductUncheckedUpdateInput>
     /**
-     * Choose, which Vendorproduct to update.
+     * Choose, which vendorproduct to update.
      */
-    where: VendorproductWhereUniqueInput
+    where: vendorproductWhereUniqueInput
   }
 
   /**
-   * Vendorproduct updateMany
+   * vendorproduct updateMany
    */
-  export type VendorproductUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Vendorproducts.
+     * The data used to update vendorproducts.
      */
-    data: XOR<VendorproductUpdateManyMutationInput, VendorproductUncheckedUpdateManyInput>
+    data: XOR<vendorproductUpdateManyMutationInput, vendorproductUncheckedUpdateManyInput>
     /**
-     * Filter which Vendorproducts to update
+     * Filter which vendorproducts to update
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
-     * Limit how many Vendorproducts to update.
+     * Limit how many vendorproducts to update.
      */
     limit?: number
   }
 
   /**
-   * Vendorproduct updateManyAndReturn
+   * vendorproduct updateManyAndReturn
    */
-  export type VendorproductUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: vendorproductSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * The data used to update Vendorproducts.
+     * The data used to update vendorproducts.
      */
-    data: XOR<VendorproductUpdateManyMutationInput, VendorproductUncheckedUpdateManyInput>
+    data: XOR<vendorproductUpdateManyMutationInput, vendorproductUncheckedUpdateManyInput>
     /**
-     * Filter which Vendorproducts to update
+     * Filter which vendorproducts to update
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
-     * Limit how many Vendorproducts to update.
+     * Limit how many vendorproducts to update.
      */
     limit?: number
   }
 
   /**
-   * Vendorproduct upsert
+   * vendorproduct upsert
    */
-  export type VendorproductUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * The filter to search for the Vendorproduct to update in case it exists.
+     * The filter to search for the vendorproduct to update in case it exists.
      */
-    where: VendorproductWhereUniqueInput
+    where: vendorproductWhereUniqueInput
     /**
-     * In case the Vendorproduct found by the `where` argument doesn't exist, create a new Vendorproduct with this data.
+     * In case the vendorproduct found by the `where` argument doesn't exist, create a new vendorproduct with this data.
      */
-    create: XOR<VendorproductCreateInput, VendorproductUncheckedCreateInput>
+    create: XOR<vendorproductCreateInput, vendorproductUncheckedCreateInput>
     /**
-     * In case the Vendorproduct was found with the provided `where` argument, update it with this data.
+     * In case the vendorproduct was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<VendorproductUpdateInput, VendorproductUncheckedUpdateInput>
+    update: XOR<vendorproductUpdateInput, vendorproductUncheckedUpdateInput>
   }
 
   /**
-   * Vendorproduct delete
+   * vendorproduct delete
    */
-  export type VendorproductDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
     /**
-     * Filter which Vendorproduct to delete.
+     * Filter which vendorproduct to delete.
      */
-    where: VendorproductWhereUniqueInput
+    where: vendorproductWhereUniqueInput
   }
 
   /**
-   * Vendorproduct deleteMany
+   * vendorproduct deleteMany
    */
-  export type VendorproductDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Vendorproducts to delete
+     * Filter which vendorproducts to delete
      */
-    where?: VendorproductWhereInput
+    where?: vendorproductWhereInput
     /**
-     * Limit how many Vendorproducts to delete.
+     * Limit how many vendorproducts to delete.
      */
     limit?: number
   }
 
   /**
-   * Vendorproduct without action
+   * vendorproduct without action
    */
-  export type VendorproductDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type vendorproductDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Vendorproduct
+     * Select specific fields to fetch from the vendorproduct
      */
-    select?: VendorproductSelect<ExtArgs> | null
+    select?: vendorproductSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Vendorproduct
+     * Omit specific fields from the vendorproduct
      */
-    omit?: VendorproductOmit<ExtArgs> | null
+    omit?: vendorproductOmit<ExtArgs> | null
   }
 
 
@@ -3242,21 +3242,21 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
-  export type VendorproductWhereInput = {
-    AND?: VendorproductWhereInput | VendorproductWhereInput[]
-    OR?: VendorproductWhereInput[]
-    NOT?: VendorproductWhereInput | VendorproductWhereInput[]
-    id?: IntFilter<"Vendorproduct"> | number
-    proname?: StringFilter<"Vendorproduct"> | string
-    prodetails?: StringFilter<"Vendorproduct"> | string
-    categroy?: StringFilter<"Vendorproduct"> | string
-    price?: IntFilter<"Vendorproduct"> | number
-    warranty?: StringFilter<"Vendorproduct"> | string
-    createdAt?: DateTimeFilter<"Vendorproduct"> | Date | string
-    image?: StringNullableFilter<"Vendorproduct"> | string | null
+  export type vendorproductWhereInput = {
+    AND?: vendorproductWhereInput | vendorproductWhereInput[]
+    OR?: vendorproductWhereInput[]
+    NOT?: vendorproductWhereInput | vendorproductWhereInput[]
+    id?: IntFilter<"vendorproduct"> | number
+    proname?: StringFilter<"vendorproduct"> | string
+    prodetails?: StringFilter<"vendorproduct"> | string
+    categroy?: StringFilter<"vendorproduct"> | string
+    price?: IntFilter<"vendorproduct"> | number
+    warranty?: StringFilter<"vendorproduct"> | string
+    createdAt?: DateTimeFilter<"vendorproduct"> | Date | string
+    image?: StringNullableFilter<"vendorproduct"> | string | null
   }
 
-  export type VendorproductOrderByWithRelationInput = {
+  export type vendorproductOrderByWithRelationInput = {
     id?: SortOrder
     proname?: SortOrder
     prodetails?: SortOrder
@@ -3267,21 +3267,21 @@ export namespace Prisma {
     image?: SortOrderInput | SortOrder
   }
 
-  export type VendorproductWhereUniqueInput = Prisma.AtLeast<{
+  export type vendorproductWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: VendorproductWhereInput | VendorproductWhereInput[]
-    OR?: VendorproductWhereInput[]
-    NOT?: VendorproductWhereInput | VendorproductWhereInput[]
-    proname?: StringFilter<"Vendorproduct"> | string
-    prodetails?: StringFilter<"Vendorproduct"> | string
-    categroy?: StringFilter<"Vendorproduct"> | string
-    price?: IntFilter<"Vendorproduct"> | number
-    warranty?: StringFilter<"Vendorproduct"> | string
-    createdAt?: DateTimeFilter<"Vendorproduct"> | Date | string
-    image?: StringNullableFilter<"Vendorproduct"> | string | null
+    AND?: vendorproductWhereInput | vendorproductWhereInput[]
+    OR?: vendorproductWhereInput[]
+    NOT?: vendorproductWhereInput | vendorproductWhereInput[]
+    proname?: StringFilter<"vendorproduct"> | string
+    prodetails?: StringFilter<"vendorproduct"> | string
+    categroy?: StringFilter<"vendorproduct"> | string
+    price?: IntFilter<"vendorproduct"> | number
+    warranty?: StringFilter<"vendorproduct"> | string
+    createdAt?: DateTimeFilter<"vendorproduct"> | Date | string
+    image?: StringNullableFilter<"vendorproduct"> | string | null
   }, "id">
 
-  export type VendorproductOrderByWithAggregationInput = {
+  export type vendorproductOrderByWithAggregationInput = {
     id?: SortOrder
     proname?: SortOrder
     prodetails?: SortOrder
@@ -3290,25 +3290,25 @@ export namespace Prisma {
     warranty?: SortOrder
     createdAt?: SortOrder
     image?: SortOrderInput | SortOrder
-    _count?: VendorproductCountOrderByAggregateInput
-    _avg?: VendorproductAvgOrderByAggregateInput
-    _max?: VendorproductMaxOrderByAggregateInput
-    _min?: VendorproductMinOrderByAggregateInput
-    _sum?: VendorproductSumOrderByAggregateInput
+    _count?: vendorproductCountOrderByAggregateInput
+    _avg?: vendorproductAvgOrderByAggregateInput
+    _max?: vendorproductMaxOrderByAggregateInput
+    _min?: vendorproductMinOrderByAggregateInput
+    _sum?: vendorproductSumOrderByAggregateInput
   }
 
-  export type VendorproductScalarWhereWithAggregatesInput = {
-    AND?: VendorproductScalarWhereWithAggregatesInput | VendorproductScalarWhereWithAggregatesInput[]
-    OR?: VendorproductScalarWhereWithAggregatesInput[]
-    NOT?: VendorproductScalarWhereWithAggregatesInput | VendorproductScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Vendorproduct"> | number
-    proname?: StringWithAggregatesFilter<"Vendorproduct"> | string
-    prodetails?: StringWithAggregatesFilter<"Vendorproduct"> | string
-    categroy?: StringWithAggregatesFilter<"Vendorproduct"> | string
-    price?: IntWithAggregatesFilter<"Vendorproduct"> | number
-    warranty?: StringWithAggregatesFilter<"Vendorproduct"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Vendorproduct"> | Date | string
-    image?: StringNullableWithAggregatesFilter<"Vendorproduct"> | string | null
+  export type vendorproductScalarWhereWithAggregatesInput = {
+    AND?: vendorproductScalarWhereWithAggregatesInput | vendorproductScalarWhereWithAggregatesInput[]
+    OR?: vendorproductScalarWhereWithAggregatesInput[]
+    NOT?: vendorproductScalarWhereWithAggregatesInput | vendorproductScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"vendorproduct"> | number
+    proname?: StringWithAggregatesFilter<"vendorproduct"> | string
+    prodetails?: StringWithAggregatesFilter<"vendorproduct"> | string
+    categroy?: StringWithAggregatesFilter<"vendorproduct"> | string
+    price?: IntWithAggregatesFilter<"vendorproduct"> | number
+    warranty?: StringWithAggregatesFilter<"vendorproduct"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"vendorproduct"> | Date | string
+    image?: StringNullableWithAggregatesFilter<"vendorproduct"> | string | null
   }
 
   export type UserCreateInput = {
@@ -3364,7 +3364,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type VendorproductCreateInput = {
+  export type vendorproductCreateInput = {
     proname: string
     prodetails: string
     categroy: string
@@ -3374,7 +3374,7 @@ export namespace Prisma {
     image?: string | null
   }
 
-  export type VendorproductUncheckedCreateInput = {
+  export type vendorproductUncheckedCreateInput = {
     id?: number
     proname: string
     prodetails: string
@@ -3385,7 +3385,7 @@ export namespace Prisma {
     image?: string | null
   }
 
-  export type VendorproductUpdateInput = {
+  export type vendorproductUpdateInput = {
     proname?: StringFieldUpdateOperationsInput | string
     prodetails?: StringFieldUpdateOperationsInput | string
     categroy?: StringFieldUpdateOperationsInput | string
@@ -3395,7 +3395,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type VendorproductUncheckedUpdateInput = {
+  export type vendorproductUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     proname?: StringFieldUpdateOperationsInput | string
     prodetails?: StringFieldUpdateOperationsInput | string
@@ -3406,7 +3406,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type VendorproductCreateManyInput = {
+  export type vendorproductCreateManyInput = {
     id?: number
     proname: string
     prodetails: string
@@ -3417,7 +3417,7 @@ export namespace Prisma {
     image?: string | null
   }
 
-  export type VendorproductUpdateManyMutationInput = {
+  export type vendorproductUpdateManyMutationInput = {
     proname?: StringFieldUpdateOperationsInput | string
     prodetails?: StringFieldUpdateOperationsInput | string
     categroy?: StringFieldUpdateOperationsInput | string
@@ -3427,7 +3427,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type VendorproductUncheckedUpdateManyInput = {
+  export type vendorproductUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     proname?: StringFieldUpdateOperationsInput | string
     prodetails?: StringFieldUpdateOperationsInput | string
@@ -3575,7 +3575,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type VendorproductCountOrderByAggregateInput = {
+  export type vendorproductCountOrderByAggregateInput = {
     id?: SortOrder
     proname?: SortOrder
     prodetails?: SortOrder
@@ -3586,23 +3586,12 @@ export namespace Prisma {
     image?: SortOrder
   }
 
-  export type VendorproductAvgOrderByAggregateInput = {
+  export type vendorproductAvgOrderByAggregateInput = {
     id?: SortOrder
     price?: SortOrder
   }
 
-  export type VendorproductMaxOrderByAggregateInput = {
-    id?: SortOrder
-    proname?: SortOrder
-    prodetails?: SortOrder
-    categroy?: SortOrder
-    price?: SortOrder
-    warranty?: SortOrder
-    createdAt?: SortOrder
-    image?: SortOrder
-  }
-
-  export type VendorproductMinOrderByAggregateInput = {
+  export type vendorproductMaxOrderByAggregateInput = {
     id?: SortOrder
     proname?: SortOrder
     prodetails?: SortOrder
@@ -3613,7 +3602,18 @@ export namespace Prisma {
     image?: SortOrder
   }
 
-  export type VendorproductSumOrderByAggregateInput = {
+  export type vendorproductMinOrderByAggregateInput = {
+    id?: SortOrder
+    proname?: SortOrder
+    prodetails?: SortOrder
+    categroy?: SortOrder
+    price?: SortOrder
+    warranty?: SortOrder
+    createdAt?: SortOrder
+    image?: SortOrder
+  }
+
+  export type vendorproductSumOrderByAggregateInput = {
     id?: SortOrder
     price?: SortOrder
   }

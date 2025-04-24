@@ -10,7 +10,7 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
-CREATE TABLE "Vendorproduct" (
+CREATE TABLE "vendorproduct" (
     "id" SERIAL NOT NULL,
     "proname" TEXT NOT NULL,
     "prodetails" TEXT NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE "Vendorproduct" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "image" TEXT,
 
-    CONSTRAINT "Vendorproduct_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "vendorproduct_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex

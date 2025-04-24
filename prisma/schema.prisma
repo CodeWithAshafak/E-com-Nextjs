@@ -16,7 +16,7 @@ model User {
   createdAt DateTime @default(now())
 }
 
-model Vendorproduct {
+model vendorproduct {
   id         Int      @id @default(autoincrement())
   proname    String
   prodetails String

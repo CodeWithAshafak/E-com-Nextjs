@@ -1,22 +1,14 @@
-'use server'
-import  {PrismaClient}  from "@prisma/client";
-const prisma = new PrismaClient();
-console.log(prisma)
-export  async function getVendorProducts() {
+
+"use server"; 
+import { PrismaClient } from "../generated/prisma";
+
+export async function getVendorProducts() {
   try {
-    const products = await prisma.vendorproduct.findMany({});
-    console.log(products,"test")
-    return products;
+    const prisma = new PrismaClient(); 
+    const products = await prisma.vendorproduct.findMany();
+    return products; 
   } catch (error) {
     console.error("Error fetching products:", error);
     return [];
   }
 }
-
-
-
-
-
-
-
-
