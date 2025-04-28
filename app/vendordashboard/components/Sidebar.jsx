@@ -1,12 +1,15 @@
 
 "use client";
 
+import { CiEdit } from "react-icons/ci";
+
+
 import { FaHome, FaList, FaBoxOpen, FaEye, FaSearch } from 'react-icons/fa';
 import React from 'react';
 import Link from 'next/link';
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar  = ({ isOpen, toggleSidebar }) => {
   return (
     <>
       <button
@@ -22,26 +25,43 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         transition-transform duration-300 z-20 shadow-lg`}
       >
         <nav className="space-y-4 flex flex-col">
-          <Link href="/vendordashboard" className="flex items-center px-4 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 transition ease-in-out duration-150 no-underline">
+          <Link href="/vendordashboard" className="no-underline flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center">
               <FaHome className="mr-2 text-xl text-white" />
-              <span className="text-white font-semibold no-underline">Home</span>
+              <span className="text-white font-semibold">Home</span>
             </div>
           </Link>
-          <Link href="/vendordashboard/insert">
-            <div className="flex items-center px-4 py-2 rounded-md hover:bg-gray-700">
-              <FaList className="mr-2" /> Insert Product
+          <Link href="/vendordashboard/insert" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+            <div className="flex items-center">
+              <FaList className="mr-2 text-xl text-white" />
+              <span className="text-white font-semibold" style={{textDecoration:"none"}}>Insert Product</span>
             </div>
           </Link>
-          <Link href="/vendordashboard/display">
-            <div className="flex items-center px-4 py-2 rounded-md hover:bg-gray-700">
-              <FaEye className="mr-2" />Your Products
+
+          <Link href="/vendordashboard/display" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+            <div className="flex items-center no-underline">
+              <FaEye className="mr-2 text-xl text-white" />
+              <span className="text-white font-semibold">Your Products</span>
             </div>
           </Link>
-          <Link href="">
-            <div className="flex items-center px-4 py-2 rounded-md hover:bg-gray-700">
-              <FaSearch className="mr-2" /> Search
+          <Link href="/vendordashboard/edit" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+            <div className="flex items-center no-underline">
+            
+              <CiEdit className="mr-2 text-xl text-white" />
+              <span className="text-white font-semibold">Edit Products</span>
             </div>
+          </Link>
+
+
+
+          <Link href="" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer " >
+         
+          <div className="flex items-center ">
+              <FaSearch className="mr-2 text-xl text-white" />
+              <span className="text-white font-semibold no-underline">Search</span>
+            </div>
+
+         
           </Link>
         </nav>
       </aside>

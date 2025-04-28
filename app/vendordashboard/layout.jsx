@@ -2,7 +2,7 @@
 
 'use client'
 
-import { SessionProvider } from "next-auth/react";
+// import { SessionProvider } from "next-auth/react";
 import DashHeader from "./components/DashHeader";
 import Sidebar from "./components/Sidebar";
 import { ThemeProvider } from "next-themes";
@@ -17,7 +17,7 @@ export default function AdminLayout({ children }) {
 
   return (
     <ThemeProvider attribute="class">
-      <SessionProvider>
+    
         <div className="flex flex-col min-h-screen">
           <DashHeader />
 
@@ -27,13 +27,13 @@ export default function AdminLayout({ children }) {
             <main
               className={`transition-all duration-300 ${
                 isSidebarOpen ? 'ml-64' : 'ml-0'
-              } w-full mt-30  p-4 bg-gray-50`}
+              } w-full mt-20 pt-12 md:pt-24 p-4 bg-gray-50 -z-1000 `}
             >
               {children}
             </main>
           </div>
         </div>
-      </SessionProvider>
+     
     </ThemeProvider>
   );
 }

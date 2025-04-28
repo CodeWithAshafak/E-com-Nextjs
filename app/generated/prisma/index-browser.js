@@ -136,6 +136,14 @@ exports.Prisma.VendorproductScalarFieldEnum = {
   image: 'image'
 };
 
+exports.Prisma.VendoruserScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  password: 'password',
+  mobile: 'mobile'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -154,7 +162,8 @@ exports.Prisma.NullsOrder = {
 
 exports.Prisma.ModelName = {
   User: 'User',
-  vendorproduct: 'vendorproduct'
+  vendorproduct: 'vendorproduct',
+  vendoruser: 'vendoruser'
 };
 
 /**

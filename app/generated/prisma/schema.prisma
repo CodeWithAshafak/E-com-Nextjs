@@ -26,3 +26,11 @@ model vendorproduct {
   createdAt  DateTime @default(now())
   image      String?
 }
+
+model vendoruser {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String
+  password String
+  mobile   String
+}

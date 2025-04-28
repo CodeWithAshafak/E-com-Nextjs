@@ -8,7 +8,7 @@ const DashHeader = () => {
     
     
       <nav className="bg-gray-800 p-4 fixed flex justify-between items-center w-full ">
-        <h3 className="text-sm font-extrabold pl-20 text-white">Vendor Dashboard </h3>
+        <h3 className="text-sm font-extrabold pl-20 text-white"> Super Admin Dashboard </h3>
 
         <div className="flex items-center space-x-4">
           <p className="text-white text-sm">Signed in as</p>

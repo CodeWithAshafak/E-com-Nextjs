@@ -16,7 +16,7 @@ import SurpirceChild from './Componets/SurpirceChild';
 import StatsSection from './Componets/StatsSection';
 import First from './Componets/First';
 import Second from './Componets/Second';
-
+import Cart from './Componets/Cart';
 export default function Home() {
   return (
     <>
@@ -27,7 +27,9 @@ export default function Home() {
     <Slider/>
     <Surprice/>
     <Favourite/>
+
     <Favouriterow/>
+    <Cart/>
     <Giftspark/>
     <Samedelivery/>
     <Banner/>

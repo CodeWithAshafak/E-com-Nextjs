@@ -25,7 +25,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         transition-transform duration-300 z-20 shadow-lg`}
       >
         <nav className="space-y-4 flex flex-col">
-          <Link href="/admindashboard" className="no-underline flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+          <Link href="/superadmindashboard" className="no-underline flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center no-underline">
               <FaHome className="mr-2 text-xl text-white " />
               <span className="text-white font-semibold decoration-none" id="home" >Home</span>
@@ -34,14 +34,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
 
           
-          <Link href="/admindashboard/insert" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+          <Link href="/superadmindashboard" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center">
               <FaList className="mr-2 text-xl text-white" />
-              <span className="text-white font-semibold" style={{textDecoration:"none"}}>View Vendors </span>
+              <span className="text-white font-semibold" style={{textDecoration:"none"}}>Manage Admins </span>
             </div>
           </Link>
 
-          <Link href="/admindashboard/manage" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+          <Link href="/superadmindashboard" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center no-underline">
               <FaEye className="mr-2 text-xl text-white" />
               <span className="text-white font-semibold">Manage Vendors</span>
@@ -49,22 +49,24 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           </Link>
 
 
-          <Link href="/admindashboard/edit" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+          <Link href="/superadmindashboard" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center no-underline">
             
               <CiEdit className="mr-2 text-xl text-white" />
-              <span className="text-white font-semibold">Edit Products</span>
+              <span className="text-white font-semibold">View Products</span>
             </div>
           </Link>
 
 
 
-          <Link href="/admindashboard" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer " >
+          <Link href="/superadmindashboard" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer " >
          
           <div className="flex items-center ">
               <FaSearch className="mr-2 text-xl text-white" />
               <span className="text-white font-semibold no-underline">Search</span>
             </div>
+
+         
           </Link>
         </nav>
       </aside>

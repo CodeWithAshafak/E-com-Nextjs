@@ -1,6 +1,11 @@
+
 'use client';
 import { useState, useEffect } from 'react';
 import { getVendorProducts } from "../../actions/vendordisplay";
+import { RiDeleteBin2Fill } from "react-icons/ri";
+import { CiEdit } from "react-icons/ci";
+
+
 
 export default function DisplayProductsPage() {
   const [products, setProducts] = useState([]);
@@ -13,6 +18,7 @@ export default function DisplayProductsPage() {
     const fetchProducts = async () => {
       try {
         const data = await getVendorProducts();
+        console.log("Products data:", data);
         setProducts(data);
       } catch (err) {
         setError(err);
@@ -35,10 +41,15 @@ export default function DisplayProductsPage() {
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
+ 
 
+  const deleteProduct = (id:any)=>{
+     console.log()
+    alert("Product Deleted")
+  }
   return (
     <>
-      <h3 className="text-4xl font-extrabold mb-4 self-center" >Vendor Products</h3>
+      <h3 className="text-4xl font-extrabold mb-4 text-center" >Edit Your Products</h3>
      
     <table className="table-auto w-full">
       
@@ -50,6 +61,12 @@ export default function DisplayProductsPage() {
           <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 font-medium text-gray-500 uppercase tracking-wider">Price</th>
           <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 font-medium text-gray-500 uppercase tracking-wider">Warranty</th>
           <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 font-medium text-gray-500 uppercase tracking-wider">Image</th>
+          <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 font-medium text-gray-500 uppercase tracking-wider">
+           Delete
+          </th>
+          <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 font-medium text-gray-500 uppercase tracking-wider">
+           Edit 
+          </th>
         </tr>
       </thead>
       <tbody className="bg-white">
@@ -62,6 +79,13 @@ export default function DisplayProductsPage() {
             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{product.warranty}</td>
             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
               <img src={product.image} alt={product.proname}  />
+            </td>
+
+            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+              <RiDeleteBin2Fill className="text-red-600 hover:text-red-900 w-9 h-9" onClick={() => deleteProduct(product.id)}/>
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+              <CiEdit className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out w-9 h-9 " />
             </td>
           </tr>
         ))}
@@ -84,4 +108,5 @@ export default function DisplayProductsPage() {
     </>
   );
 }
+
 
