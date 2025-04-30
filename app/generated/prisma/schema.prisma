@@ -16,6 +16,23 @@ model User {
   createdAt DateTime @default(now())
 }
 
+model Order {
+  id                Int      @id @default(autoincrement())
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  razorpayOrderId   String
+  razorpayPaymentId String
+  razorpaySignature String
+  userName          String
+  userEmail         String
+  phoneNumber       String
+  address           String
+  pincode           String
+  products          Json
+  amount            Int
+  paymentStatus     String   @default("pending")
+}
+
 model vendorproduct {
   id         Int      @id @default(autoincrement())
   proname    String
@@ -27,10 +44,20 @@ model vendorproduct {
   image      String?
 }
 
-model vendoruser {
+model vendor {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  password  String
+  phone     String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+}
+
+model admin {
   id       Int    @id @default(autoincrement())
   name     String
   email    String
   password String
-  mobile   String
+  phone    String
 }

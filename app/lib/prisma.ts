@@ -1,6 +1,6 @@
 import { PrismaClient } from "../generated/prisma";
 let prisma: PrismaClient;
-export function getPrismaClient() {
+export default function getPrismaClient() {
   if (!prisma) {
     prisma = new PrismaClient();
   }

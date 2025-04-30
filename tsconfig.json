@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/vendordashboard/components/Sidebar.jsx"  ],
+, "app/vendordashboard/components/Sidebar.jsx", "app/vendordashboard/insert/page.tsx", "app/vendordashboard/layout.js", "app/actions/vendorsignup.js", "app/actions/vendorList.js"  ],
   "exclude": [
     "node_modules"
   ]

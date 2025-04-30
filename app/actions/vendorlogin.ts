@@ -1,14 +1,14 @@
 'use server';
 
 import { PrismaClient } from "../generated/prisma";
-export async function vendorlogin(prevState: any, formData: FormData) {
+export  async function vendorlogin(prevState: any, formData: FormData) {
     const prisma = new PrismaClient();
     console.log(formData);
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
 
     try {
-        const vendor = await prisma.vendoruser.findFirst({
+        const vendor = await prisma.vendor.findFirst({
             where: {
                 email,
                 password

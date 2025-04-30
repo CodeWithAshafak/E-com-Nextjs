@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Inter, Roboto_Mono } from "next/font/google";
-import { vendorsignup } from "../../../actions/vendorsignup";
+import vendorsignup from "../../../actions/vendorsignup";
 import { useActionState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -23,12 +23,12 @@ const robotoMono = Roboto_Mono({
 
 export { inter, robotoMono };
 
-const Page: React.FC = () => {
+const signup: React.FC = () => {
   const router = useRouter();
   const [state, formAction] = useActionState(vendorsignup, initialState);
 
   if (state.success) {
-    router.push("../vendorauth");
+    router.push("/auth/vendorauth/login");
   }
 
   return (
@@ -48,33 +48,12 @@ const Page: React.FC = () => {
 
       <div className="p-7 absolute top-90 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg w-130 h-auto">
         <div>
-          <h1 className="text-2xl inter">Sign up</h1>
-          <p>
-            Already have an account?{" "}
-            <span className="text-blue-600 relative left-2.5 font-bold">
-              <Link href="/venderauth">Sign in</Link>
-            </span>
-          </p>
+          <h3 className="text-xl inter text-center">Registration</h3>
+        
           {state?.error && <p className="text-red-600">{state.error}</p>}
         </div>
 
-        <form
-          className="mt-10"
-          action={formAction}
-          onSubmit={(e) => {
-
-            const form = e.currentTarget;
-            const formData = new FormData(form);
-           
-
-            console.log("Name:", formData.get("name"));
-            console.log("Email:", formData.get("email"));
-            console.log("Password:", formData.get("password"));
-            console.log("Mobile:", formData.get("mobile"));
-
-            formAction(formData);
-          }}
-        >
+        <form className="mt-10" action={formAction}>
           <div className="flex flex-col mb-3">
             <label htmlFor="name" className="text-gray-600">
               Name <sup>*</sup>
@@ -115,17 +94,27 @@ const Page: React.FC = () => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label htmlFor="mobile" className="text-gray-600">
+            <label htmlFor="phone" className="text-gray-600">
               Mobile <sup>*</sup>
             </label>
             <input
               type="text"
-              id="mobile"
-              name="mobile"
+              id="phone"
+              name="phone"
               placeholder="Enter Mobile Number"
               className="shadow-lg p-3 border border-gray-300 w-full"
               required
             />
+          </div>
+
+          <div className="text-sm text-gray-600 mt-4 text-center">
+            <span>Already have an account? </span>
+            <Link
+              href="/auth/vendorauth/login"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              Click here
+            </Link>
           </div>
 
           <div
@@ -148,4 +137,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default signup;

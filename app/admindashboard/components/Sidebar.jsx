@@ -34,12 +34,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
 
           
-          <Link href="/admindashboard/insert" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+          <Link href="/admindashboard/vendor" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center">
               <FaList className="mr-2 text-xl text-white" />
-              <span className="text-white font-semibold" style={{textDecoration:"none"}}>View Vendors </span>
+              <span className="text-white font-semibold" style={{textDecoration:"none"}}>
+              Vendor List  
+              </span>
             </div>
           </Link>
+
+          <Link href="/admindashboard/search" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer " >
+         
+         <div className="flex items-center ">
+             <FaSearch className="mr-2 text-xl text-white" />
+             <span className="text-white font-semibold no-underline">Search</span>
+           </div>
+         </Link>
 
           <Link href="/admindashboard/manage" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
             <div className="flex items-center no-underline">
@@ -55,17 +65,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               <CiEdit className="mr-2 text-xl text-white" />
               <span className="text-white font-semibold">Edit Products</span>
             </div>
-          </Link>
-
-
-
-          <Link href="/admindashboard" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer " >
-         
-          <div className="flex items-center ">
-              <FaSearch className="mr-2 text-xl text-white" />
-              <span className="text-white font-semibold no-underline">Search</span>
-            </div>
-          </Link>
+          </Link>    
         </nav>
       </aside>
     </>

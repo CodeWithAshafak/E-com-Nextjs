@@ -7,7 +7,7 @@ const DashHeader = () => {
     <>
     
     
-      <nav className="bg-gray-800 p-4 fixed flex justify-between items-center w-full ">
+      <nav className="bg-gray-800 p-4 fixed flex justify-between items-center w-full z-100">
         <h3 className="text-sm font-extrabold pl-20 text-white">Admin Dashboard </h3>
 
         <div className="flex items-center space-x-4">

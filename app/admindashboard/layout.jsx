@@ -1,11 +1,6 @@
-
-
 'use client'
-
-// import { SessionProvider } from "next-auth/react";
 import DashHeader from "./components/DashHeader";
 import Sidebar from "./components/Sidebar";
-import { ThemeProvider } from "next-themes";
 import { useState } from "react";
 
 export default function AdminLayout({ children }) {
@@ -16,12 +11,12 @@ export default function AdminLayout({ children }) {
   };
 
   return (
-    <ThemeProvider attribute="class">
+ 
     
         <div className="flex flex-col min-h-screen">
           <DashHeader />
 
-          <div className="flex flex-1 pt-16 relative"> 
+          <div > 
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
             <main
@@ -34,7 +29,7 @@ export default function AdminLayout({ children }) {
           </div>
         </div>
      
-    </ThemeProvider>
+   
   );
 }
 
