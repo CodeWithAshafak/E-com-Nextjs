@@ -1,22 +1,41 @@
 "use client";
-
 import React, { useActionState } from "react";
-// import { useFormState } from 'react-dom';
+import Swal from 'sweetalert2'
+import { useRouter } from "next/navigation";
 import { vendorInsertProduct } from "../../actions/vendorInsertProduct";
-
 const initialState = {
   success: false,
   error: ''
 };
 
 const Page: React.FC = () => {
+  const router = useRouter();
   const [state, formAction] = useActionState(vendorInsertProduct, initialState);
+    if (state?.success) {
+     
+      Swal.fire({
+        title: "Product Added!",
+        icon: "success",
+        draggable: true
+      });
+ 
+    }else if(state?.error){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+  
+      });
+
+    }
    
   return (
     <>
   
-    <div className="max-w-md   mx-auto p-6 border rounded shadow">
-      <h1 className="text-xl font-bold mb-4">Insert Product</h1>
+     <div className="bg-white-300 p-4 pb-6  m-auto w-2/3 relative border border-b-cyan-300 ">
+
+      <h3 className="text-4xl font-extrabold mb-4 text-center uppercase" >Insert Product</h3>
+      <p className="text-gray-600 mb-4">Please fill in the details below:</p>
       <form
         action={formAction}
         onSubmit={(e) => {
@@ -55,6 +74,8 @@ const Page: React.FC = () => {
           <option value="Mobile">Mobile</option>
           <option value="TV">TV</option>
           <option value="Gift">Gift</option>
+          <option value="Plant">Plant</option>
+          <option value="Same Day Delivery">Same Day Delivery</option>
           <option value="Food and beverage">Food and beverage</option>
         </select>
       
@@ -96,12 +117,16 @@ const Page: React.FC = () => {
         <p className="mt-4 text-center text-green-600">
          Dear vendor your product is successfully inserted !
         </p>
+
+
       )}
       {state?.error && (
         <p className="mt-4 text-center text-red-600">{state.error}</p>
       )}
+    
+  
     </div>
-
+ 
     </>
   )
 }

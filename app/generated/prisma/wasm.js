@@ -171,6 +171,16 @@ exports.Prisma.AdminScalarFieldEnum = {
   name: 'name',
   email: 'email',
   password: 'password',
+  phone: 'phone',
+  status: 'status',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.SuperadminScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  password: 'password',
   phone: 'phone'
 };
 
@@ -205,7 +215,8 @@ exports.Prisma.ModelName = {
   Order: 'Order',
   vendorproduct: 'vendorproduct',
   vendor: 'vendor',
-  admin: 'admin'
+  admin: 'admin',
+  superadmin: 'superadmin'
 };
 
 /**

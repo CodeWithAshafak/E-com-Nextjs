@@ -1,12 +1,9 @@
 'use server'
-
-import { PrismaClient } from "@prisma/client"
-const prisma= new PrismaClient()
-
-export default async function adminLog(prevState,formData){
-
-    const email= formData.get('email')
-    const password=formData.get('password')
+import { PrismaClient } from "../generated/prisma";
+export default async function adminLog(prevState: any, formData: FormData){
+    const prisma= new PrismaClient()
+    const email= formData.get('email') as string
+    const password=formData.get('password') as string
 
     try {
         const admin = await prisma.admin.findFirst({

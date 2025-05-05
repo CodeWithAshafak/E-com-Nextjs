@@ -3,9 +3,12 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Inter, Roboto_Mono } from 'next/font/google';
-
+import Swal from 'sweetalert2'
 import { useActionState } from "react";
 import { vendorlogin } from "../../../actions/vendorlogin";
+import transporter from '../../../middlewere/Nodemailer'
+import {RandomPass}from '../../../middlewere/Randompass'
+
 
 const inter = Inter({ subsets: ['latin'], weight: '400', variable: '--font-inter' });
 const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: '400', variable: '--font-roboto-mono' });
@@ -29,6 +32,13 @@ const Login: React.FC = () => {
       localStorage.setItem("email",state.vendor.email)
       localStorage.setItem("vendor",state.vendor.name)
       localStorage.setItem('id',state.vendor.id)
+     Swal.fire({
+               title: "Login Done!",
+               icon: "success",
+               draggable: true
+     });
+
+
       router.push("/vendordashboard");
     }
   }, [state.success, router]);
@@ -50,17 +60,15 @@ const Login: React.FC = () => {
 
       <div className="p-12 absolute top-90 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg w-130 h-auto">
         <div>
-          <h1 className="text-2xl inter">Sign in</h1>
-          {/* <p>
-            Don't have an account?{" "}
-            <span className="text-blue-600 relative left-2.5 font-bold">
-              <Link href="/auth/vendorauth/signup">Sign up</Link>
-            </span>
-          </p> */}
+          
+          <h4 className="text-xl inter text-center uppercase">
+          Sign in
+          </h4>
+         
         </div>
-        <form className="mt-10" action={formAction}>
-          <div className="flex flex-col mb-4">
-            <label htmlFor="emailOrMobile" className="text-gray-600">
+        <form className="mt-10 space-y-6" action={formAction}>
+          <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
+            <label htmlFor="emailOrMobile" className="block text-sm font-medium text-gray-700">
               Email ID or Mobile Number <sup>*</sup>
             </label>
             <input
@@ -68,12 +76,35 @@ const Login: React.FC = () => {
               name="email"
               id="emailOrMobile"
               placeholder="Enter Email"
-              className="shadow-lg p-3 border border-gray-300 w-full"
+              className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:mt-0 sm:text-sm"
               required
             />
           </div>
-          <div className="flex flex-col mb-4">
-            <label htmlFor="password" className="text-gray-600">
+
+          <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
+            <label htmlFor="OTP" className="block text-sm font-medium text-gray-700">
+              OTP <sup>*</sup>
+            </label>
+            <div className="mt-1 flex rounded-md shadow-sm">
+              <input
+                type="password"
+                id="OTP"
+                name="OTP"
+                placeholder="Enter OTP"
+                className="flex-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                required
+              />
+              <button
+                type="submit"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Send OTP
+              </button>
+            </div>
+          </div>
+
+          <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
               Password <sup>*</sup>
             </label>
             <input
@@ -81,34 +112,26 @@ const Login: React.FC = () => {
               id="password"
               name="password"
               placeholder="Enter Password"
-              className="shadow-lg p-3 border border-gray-300 w-full"
+              className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               required
             />
           </div>
 
 
-          <div className="text-sm text-gray-600 mt-4">
-          <span>Don't have registration? </span>
-           <Link href="/auth/vendorauth/signup" className="text-blue-600 hover:underline font-medium">
-           Click here
-          </Link>
-    </div>
+          <div className="text-sm text-gray-600 mt-4 sm:mt-0 sm:ml-4 sm:pl-4">
+            <span className="block sm:inline">Don't have registration? </span>
+            <Link href="/auth/vendorauth/signup" className="text-blue-600 hover:underline font-medium sm:ml-1">
+              Click here
+            </Link>
+          </div>
 
-
-
-          <div
-            className="btn"
-            style={{
-              backgroundColor: "#DD2745",
-              height: "40px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              top: "20px"
-            }}
-          >
-            <button type="submit" className="text-white">SIGN IN</button>
+          <div className="mt-6 sm:mt-0 sm:ml-4 sm:pl-4 sm:flex sm:items-center">
+            <button
+              type="submit"
+              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full sm:w-auto"
+            >
+              SIGN IN
+            </button>
           </div>
         </form>
 
@@ -116,9 +139,7 @@ const Login: React.FC = () => {
           <p className="text-red-500 mt-4">{state.error}</p>
         )}
 
-        <div className="relative flex justify-end top-7">
-          <p className="text-gray-500">Forgot Password ?</p>
-        </div>
+        
         <br />
         <br />
       </div>

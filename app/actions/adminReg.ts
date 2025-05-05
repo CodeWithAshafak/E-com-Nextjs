@@ -1,24 +1,25 @@
 'use server'
 
-import { PrismaClient } from "@prisma/client"
-const prisma= new PrismaClient()
-
-export default async function adminReg(prevState,formData) {
-     
-    const name = formData.get('name') 
-    const email = formData.get('email') 
-    const password = formData.get('password') 
-    const phone = formData.get('phone') 
-console.log(name,email,password,phone)  
-
+import { PrismaClient } from "../generated/prisma";
+export default async function adminReg(prevState: any, formData: FormData) {
+    
+    const prisma = new PrismaClient();
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
+    const phone = formData.get('phone') as string;
+    console.log(name,email,password,phone)  
 try {
-    const adminInf=await prisma.admin.create({
+    const adminlogdata=await prisma.admin.create({
         data:{name,email,password,phone}
     })
     return { success: true };
 } catch (error) {
-    console.error('Error creating product:', error);
-        return { error: 'Failed to create product' };
+    console.error('Error at login action:', error);
+        return { error: 'Failed to admin login' };
 }
-    
+
 }
+
+
+

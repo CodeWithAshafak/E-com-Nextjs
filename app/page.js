@@ -17,11 +17,16 @@ import StatsSection from './Componets/StatsSection';
 import First from './Componets/First';
 import Second from './Componets/Second';
 import Cart from './Componets/Cart';
+import Demo from './Componets/Demo';
+
 export default function Home() {
   return (
     <>
     
 <Header/>
+
+
+<Demo/>
   <First/>
   <Second/>
     <Slider/>
@@ -40,6 +45,8 @@ export default function Home() {
     <SurpirceChild/>
     <Testimonials/>
      <StatsSection/>
+
+    
     <Footer/>
     </>     
   );

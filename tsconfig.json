@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -27,9 +23,15 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "app/vendordashboard/components/Sidebar.jsx", "app/vendordashboard/insert/page.tsx", "app/vendordashboard/layout.js", "app/actions/vendorsignup.js", "app/actions/vendorList.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "app/vendordashboard/components/Sidebar.tsx",
+    "app/vendordashboard/insert/page.tsx",
+    "app/vendordashboard/layout.tsx",
+    "app/actions/vendorsignup.ts",
+    "app/actions/vendorList.ts",
+    "app/superadmindashboard/components/DashHeader.tsx",
+    "app/superadmindashboard/components/Sidebar.tsx",
+    "app/admindashboard/components/DashboardTopbar.tsx"
+, "app/superadmindashboard/page.jsx", "app/Componets/First.tsx", "app/admindashboard/layout.tsx"  ],
+  "exclude": ["node_modules"]
 }

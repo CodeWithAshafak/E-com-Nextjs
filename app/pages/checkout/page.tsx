@@ -50,8 +50,8 @@ const CheckoutPage: React.FC = () => {
 
     const orderData = {
       user: {
-        name: user.fullName,
-        email: user.emailAddresses[0].emailAddress,
+        name: user?.fullName,
+        email: user?.emailAddresses[0].emailAddress,
         address,
         pincode,
         phoneNumber,
@@ -120,13 +120,13 @@ const CheckoutPage: React.FC = () => {
   return (
     <>
     <Header/>
-      <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-extrabold mb-6 text-center text-indigo-600">Checkout</h1>
-        <div className="flex flex-col md:flex-row mt-6 space-x-0 md:space-x-4">
+      <div className="container mx-auto p-4 mt-15">
+        <h3 className="text-4xl font-extrabold mb-6 text-center text-indigo-600 uppercase">Checkout</h3>
+        <div className="flex flex-col md:flex-row mt-15 space-x-0 md:space-x-4">
           
       
           <div className="w-full md:w-1/2 md:mr-4">
-            <h2 className="text-2xl font-bold mb-4">Cart Items</h2>
+            <h5 className="text-2xl font-bold mb-4 uppercase" >Cart Items</h5>
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-200">
@@ -153,12 +153,13 @@ const CheckoutPage: React.FC = () => {
               </tbody>
             </table>
         
-            <h3 className="text-2xl font-bold mt-4">Total Price: Rs. {total}</h3>
+            <h5 className="text-2xl font-bold mt-4 ">Total Payable Amount: 
+            ₹ {total}</h5>
           </div>
 
           
           <div className="w-full md:w-1/2 md:ml-4">
-            <h2 className="text-2xl font-bold mb-4">Shipping Details</h2>
+            <h5 className="text-2xl font-bold mb-4 uppercase ">Shipping Details</h5>
             <form>
               <div className="mb-4">
                 <label htmlFor="name" className="block mb-2">Name:</label>

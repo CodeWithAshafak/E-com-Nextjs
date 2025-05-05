@@ -1,6 +1,6 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import cartSlice from "./cartSlice";
-// import favSlice from './favSlice'
+import favSlice from './favSlice'
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
@@ -10,12 +10,12 @@ const persistConfig = {
 };
 
 const persistedCartReducer = persistReducer(persistConfig, cartSlice);
-//const persistedFavReducer = persistReducer(persistConfig, favSlice);
+const persistedFavReducer = persistReducer(persistConfig, favSlice);
 
 const store = configureStore({
   reducer: {
     addtocart: persistedCartReducer,
-   // addtofav: persistedFavReducer,
+   addtofav: persistedFavReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

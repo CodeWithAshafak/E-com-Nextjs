@@ -1,8 +1,16 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-toastify/dist/ReactToastify.css";
+
+
 import { Noto_Serif } from 'next/font/google';
 import ReduxProvider from "./reduxProvider";
+
 const notoSerif = Noto_Serif({
   subsets: ['latin'],
   weight: ['400', '700'], 
@@ -38,14 +46,19 @@ import {
 
 export default function RootLayout({ children }) {
   return (
+    
     <ClerkProvider>
       <ReduxProvider>
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      
         {children}
+ 
       </body>
     </html>
     </ReduxProvider>
   </ClerkProvider>
+  
+
   );
 }

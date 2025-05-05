@@ -59,4 +59,14 @@ model admin {
   email    String
   password String
   phone    String
+  status   String @default("pending")
+  createdAt DateTime @default(now())
+
+}
+model superadmin {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String
+  password String
+  phone    String
 }
