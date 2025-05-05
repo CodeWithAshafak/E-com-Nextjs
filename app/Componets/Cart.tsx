@@ -46,7 +46,7 @@ export default function Cart() {
         <h3 className="text-center text-2xl font-semibold mb-6">Best Selling Gifts</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product) => (
+          {products.filter((e) => e.categroy === 'Same Day Delivery').map((product) => (
             <div className="card bg-base-100 shadow-md w-full" key={product.id}>
               <figure className="px-5 pt-5">
                 <img

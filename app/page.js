@@ -17,7 +17,7 @@ import StatsSection from './Componets/StatsSection';
 import First from './Componets/First';
 import Second from './Componets/Second';
 import Cart from './Componets/Cart';
-import Demo from './Componets/Demo';
+
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
 <Header/>
 
 
-<Demo/>
+
   <First/>
   <Second/>
     <Slider/>
