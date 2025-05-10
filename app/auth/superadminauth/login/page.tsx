@@ -29,7 +29,7 @@ const Login: React.FC = () => {
     if (state.success) {
       console.log("data from backend to frontend", state);
       localStorage.setItem("email", state.superAdmin.email);
-      localStorage.setItem("superadmin", state.superAdminn.name);
+      localStorage.setItem("superAdmin", state.superAdmin.name);
       localStorage.setItem("id", state.superAdmin.id);
 
       Swal.fire({
@@ -60,7 +60,7 @@ const Login: React.FC = () => {
       <div className="p-12 absolute top-90 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg w-130 h-auto">
         <div>
           <h4 className="text-xl inter text-center uppercase">
-            Super Admin Sign in
+            Sign in
           </h4>
         </div>
         <form className="mt-10" action={formAction}>
@@ -94,7 +94,7 @@ const Login: React.FC = () => {
           <div className="text-sm text-gray-600 mt-4">
             <span>Don't have registration? </span>
             <Link
-              href="/auth/vendorauth/signup"
+              href="/auth/superadminauth/signup"
               className="text-blue-600 hover:underline font-medium"
             >
               Click here
@@ -111,9 +111,7 @@ const Login: React.FC = () => {
 
         {state.error && <p className="text-red-500 mt-4">{state.error}</p>}
 
-        <div className="relative flex justify-end top-7">
-          <p className="text-gray-500">Forgot Password ?</p>
-        </div>
+        
         <br />
         <br />
       </div>

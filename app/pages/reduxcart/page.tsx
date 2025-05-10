@@ -32,6 +32,7 @@ const page: React.FC = () => {
   const { isSignedIn } = useUser();
   const dispatch = useDispatch();
   const product = useSelector((state: RootState) => state.addtocart.cart);
+ // console.log('total product is', product);
   const [total, setTotal] = useState<number>(0);
   const router = useRouter();
   useEffect(() => {
@@ -68,7 +69,7 @@ const page: React.FC = () => {
     <>
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {product?.length>0 ? ( <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h3 className="text-4xl font-extrabold uppercase  text-indigo-500 mt-5 mb-4 text-center">
           Shopping Cart
         </h3>
@@ -143,7 +144,13 @@ const page: React.FC = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div>) : (
+        <div className="flex flex-col justify-center items-center mt-30 border border-amber-400 bg-white shadow-md rounded-lg p-6">
+          <h3 className="text-center text-2xl font-bold mb-4">Your Cart is Empty</h3>
+          <Image src="/loader/emptycart.gif" alt="empty cart gif" width={400} height={400} className="mx-auto" />
+
+        </div>
+      ) }
     </>
   );
 };

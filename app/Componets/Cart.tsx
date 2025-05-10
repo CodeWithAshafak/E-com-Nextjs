@@ -48,7 +48,7 @@ export default function Cart() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {products.filter((e) => e.categroy === 'Same Day Delivery').map((product) => (
             <div className="card bg-base-100 shadow-md w-full" key={product.id}>
-              <figure className="px-5 pt-5">
+              <figure className="px-5 pt-5 flex justify-between Item-center">
                 <img
                   src={product.image}
                   alt={product.proname}
@@ -60,7 +60,7 @@ export default function Cart() {
                 <p className="text-lg">
                   <strong>Price:</strong> ₹{product.price}
                 </p>
-                <div className="card-actions flex gap-4 mt-4">
+                <div className="card-actions flex justify-center items-center gap-4 mt-4">
                   <button
                     onClick={() => {
                       dispatch(add({ ...product, quantity: 1 }));

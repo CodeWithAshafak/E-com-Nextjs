@@ -1,13 +1,12 @@
 'use client'
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Inter, Roboto_Mono } from 'next/font/google';
 import Swal from 'sweetalert2'
 import { useActionState } from "react";
 import { vendorlogin } from "../../../actions/vendorlogin";
-import transporter from '../../../middlewere/Nodemailer'
-import {RandomPass}from '../../../middlewere/Randompass'
+import Email from '../../../actions/Email'
 
 
 const inter = Inter({ subsets: ['latin'], weight: '400', variable: '--font-inter' });
@@ -16,33 +15,38 @@ const robotoMono = Roboto_Mono({ subsets: ['latin'], weight: '400', variable: '-
 const initialState = {
   success: false,
   error: ''
-};
+}
 
 export { inter, robotoMono };
 
-const Login: React.FC = () => {
+const Login = () => {
   const router = useRouter();
   const [state, formAction] = useActionState(vendorlogin, initialState);
+  const [otp, setOtp] = useState('');
+  function generateOtp(){
 
-  
+    const myOtp= Math.floor(1000 + Math.random()*900000).toString()
+    setOtp(myOtp)
+    return myOtp
+ 
+}
   useEffect(() => {
     if (state.success) {
-    
       console.log(state.vendor);
       localStorage.setItem("email",state.vendor.email)
       localStorage.setItem("vendor",state.vendor.name)
       localStorage.setItem('id',state.vendor.id)
-     Swal.fire({
-               title: "Login Done!",
-               icon: "success",
-               draggable: true
-     });
-
+      Swal.fire({
+        title: "Login Done!",
+        icon: "success",
+        draggable: true
+      });
 
       router.push("/vendordashboard");
     }
   }, [state.success, router]);
 
+ 
   return (
     <>
       <div className="w-full border border-gray-500 h-13 text-center">
@@ -69,7 +73,7 @@ const Login: React.FC = () => {
         <form className="mt-10 space-y-6" action={formAction}>
           <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
             <label htmlFor="emailOrMobile" className="block text-sm font-medium text-gray-700">
-              Email ID or Mobile Number <sup>*</sup>
+              Email ID  <sup>*</sup>
             </label>
             <input
               type="text"
@@ -79,28 +83,6 @@ const Login: React.FC = () => {
               className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:mt-0 sm:text-sm"
               required
             />
-          </div>
-
-          <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
-            <label htmlFor="OTP" className="block text-sm font-medium text-gray-700">
-              OTP <sup>*</sup>
-            </label>
-            <div className="mt-1 flex rounded-md shadow-sm">
-              <input
-                type="password"
-                id="OTP"
-                name="OTP"
-                placeholder="Enter OTP"
-                className="flex-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-              <button
-                type="submit"
-                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Send OTP
-              </button>
-            </div>
           </div>
 
           <div className="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center">
@@ -116,7 +98,6 @@ const Login: React.FC = () => {
               required
             />
           </div>
-
 
           <div className="text-sm text-gray-600 mt-4 sm:mt-0 sm:ml-4 sm:pl-4">
             <span className="block sm:inline">Don't have registration? </span>
@@ -138,8 +119,6 @@ const Login: React.FC = () => {
         {state.error && (
           <p className="text-red-500 mt-4">{state.error}</p>
         )}
-
-        
         <br />
         <br />
       </div>
@@ -148,3 +127,4 @@ const Login: React.FC = () => {
 }
 
 export default Login;
+

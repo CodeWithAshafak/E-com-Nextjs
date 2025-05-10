@@ -18,7 +18,7 @@ export default function Paichart() {
     const chart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: ['Tablet', 'Laptop', 'Mobile', 'Shoes', 'Cloth'],
+        labels: ['Gifts', 'flowers', 'New Arrivals', 'International', 'Personalized'],
         datasets: [
           {
             label: 'Dataset 1',

@@ -32,6 +32,6 @@
     "app/superadmindashboard/components/DashHeader.tsx",
     "app/superadmindashboard/components/Sidebar.tsx",
     "app/admindashboard/components/DashboardTopbar.tsx"
-, "app/superadmindashboard/page.jsx", "app/Componets/First.tsx", "app/admindashboard/layout.tsx"  ],
+, "app/superadmindashboard/page.jsx", "app/Componets/First.tsx", "app/admindashboard/layout.tsx", "app/auth/vendorauth/nodemailor/page.tsx"  ],
   "exclude": ["node_modules"]
 }

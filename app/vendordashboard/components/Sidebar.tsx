@@ -9,7 +9,7 @@ import { GrUserAdmin } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CiEdit } from "react-icons/ci";
 import { FaHome, FaList, FaBoxOpen, FaEye, FaSearch } from 'react-icons/fa';
-import { CiDeliveryTruck } from "react-icons/ci";
+import { TbTruckDelivery } from "react-icons/tb";
 
 
 
@@ -65,6 +65,15 @@ const Sidebar: React.FC = () => {
             
               <CiEdit className="mr-2 text-xl text-white" />
              <span className="text-white font-semibold">Edit Products</span>
+           </div>
+         </Link>
+
+
+         
+         <Link href="/vendordashboard/order" className="flex items-center px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 cursor-pointer">
+            <div className="flex items-center no-underline">
+              <TbTruckDelivery  className="mr-2 text-xl text-white" />
+             <span className="text-white font-semibold">Customer Orders</span>
            </div>
          </Link>
 

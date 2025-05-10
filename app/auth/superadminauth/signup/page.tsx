@@ -32,7 +32,7 @@ const signup: React.FC = () => {
   const [state, formAction] = useActionState(superAdminSignUp, initialState);
 
   if (state.success) {
-    //alert("Registered successfully");
+   
     Swal.fire({
       title: "Registration Done!",
       icon: "success",
@@ -127,19 +127,41 @@ const signup: React.FC = () => {
             />
           </div>
 
+         
           <div className="text-sm text-gray-600 mt-4 text-center">
-            <span>Already have an account? </span>
-            <Link
-              href="/auth/superadminauth/login"
-              className="text-blue-600 hover:underline font-medium"
-            >
-              Click here
-            </Link>
+            <div>
+              <button
+                type="submit"
+                className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+              >
+                SIGN UP
+              </button>
+            </div>
+
+            <div>
+              <span>Already have an account? </span>
+              <Link
+                  href="/auth/superadminauth/login"
+                className="text-blue-600 hover:underline font-medium"
+              >
+                Click here
+              </Link>
+            </div>
           </div>
 
-            <button type="submit" className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 mt-1">
-              SIGN UP
-            </button>
+
+
+
+
+
+
+           
+
+
+
+         
+
+
 
         </form>
       </div>

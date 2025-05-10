@@ -63,7 +63,7 @@ const signup: React.FC = () => {
       <div className="p-7 absolute top-90 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg w-130 h-auto">
         <div>
           <h4 className="text-xl inter text-center uppercase">
-          Admin Registration
+          Vendor Registration
           </h4>
 
           {state?.error && <p className="text-red-600">{state.error}</p>}

@@ -1,7 +1,9 @@
 "use client";
-import React, { useActionState } from "react";
+import React, { useActionState, useEffect } from "react";
 import Swal from 'sweetalert2'
+
 import { useRouter } from "next/navigation";
+import { vendorList } from "../../actions/vendorList";
 import { vendorInsertProduct } from "../../actions/vendorInsertProduct";
 const initialState = {
   success: false,
@@ -9,6 +11,9 @@ const initialState = {
 };
 
 const Page: React.FC = () => {
+  useEffect(() => {
+
+  }, [])
   const router = useRouter();
   const [state, formAction] = useActionState(vendorInsertProduct, initialState);
     if (state?.success) {
